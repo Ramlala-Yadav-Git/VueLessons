@@ -28,6 +28,11 @@
         <button v-if="!show" @click="changeShow">Fake</button>
         <button v-if="show" @click="changeShow">Reality</button>
 
+        <div v-show="show"> Showing</div>
+        <!-- it will show and not show by using the css property  hide and show
+             this can cause performance issue
+        -->
+
     </div>
 </body>
 <script src="./app.js"></script>

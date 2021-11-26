@@ -1,6 +1,7 @@
 const app = Vue.createApp({
 
     data() {
+        // this will manage all the initial data of your component
         return {
             title: "This is my first app",
             age: "24",
@@ -8,6 +9,7 @@ const app = Vue.createApp({
             show: true
         }
     }, methods: {
+        // You must write all the method inside this method object
         changeName() {
             if (this.name == "Ramlala Yadav") {
                 this.name = "Somesh Kumar Yadav"
@@ -18,9 +20,8 @@ const app = Vue.createApp({
         },
         changeShow() {
             this.show = !this.show
-            console.log("hi");
         }
     }
 })
 
-app.mount("#app")
+app.mount("#app")// this will mount you vue component inside this app id element
