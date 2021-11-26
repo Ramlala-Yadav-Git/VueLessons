@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@next"></script>
+    <title>Chapter 1</title>
+
+</head>
+
+<body>
+    <h1>Hello Vue</h1>
+    <div id="app">
+        <h4>{{title}}</h4>
+        <p>My name is {{name}}, and I am {{age}} year old :)</p>
+        <button v-on:click="age++">Increase the age by 1</button>
+        <button v-on:click="age--">Decrease the age by 1</button>
+        <button v-on:click="changeName">Change Name </button>
+        <br>
+
+        <br>
+        <h1 v-if="show">Somesh is a bad boy !!!</h1>
+        <h1 v-if="!show">Somesh is a Good boy !!!</h1>
+
+        <button v-if="!show" @click="changeShow">Fake</button>
+        <button v-if="show" @click="changeShow">Reality</button>
+
+    </div>
+</body>
+<script src="./app.js"></script>
+
+</html>
