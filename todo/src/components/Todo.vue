@@ -1,9 +1,11 @@
 <template>
   <div class="todo">
-    <input type="text" placeholder="Add your todo.." v-model="input" />
-    <button @click="AddTodo">Add</button>
+    <div class="add">
+      <input type="text" placeholder="Add your todo.." v-model="input" />
+      <button @click="AddTodo">Add</button>
+    </div>
     <div class="todoList">
-      <div v-if="edit">
+      <div v-if="edit" class="editBox">
         <input type="text" v-model="editData" />
         <button @click="() => hendleEditSubmit(editId)">Submit</button>
       </div>
@@ -132,6 +134,59 @@ li {
 }
 .edit {
   background: rgb(110, 204, 3);
+  color: white;
+  border-radius: 5px;
+  border: none;
+  padding: 5px;
+}
+.editBox {
+  position: sticky;
+  width: 500px;
+  top: 150px;
+  /* border: 1px solid black; */
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  border-radius: 10px;
+  background: rgba(0, 255, 128, 0.336);
+}
+.editBox input {
+  margin: 10px;
+  border-radius: 5px;
+  border: none;
+  padding: 5px;
+}
+.editBox button {
+  background: rgb(3, 90, 24);
+  color: white;
+  border-radius: 5px;
+  border: none;
+  padding: 5px;
+}
+.add {
+  width: 500px;
+  top: 100px;
+  /* border: 1px solid black; */
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  border-radius: 10px;
+  background: rgba(76, 0, 255, 0.678);
+}
+.add input {
+  margin: 10px;
+  border-radius: 5px;
+  border: none;
+  padding: 5px;
+}
+.add button {
+  background: rgb(1, 61, 15);
   color: white;
   border-radius: 5px;
   border: none;
