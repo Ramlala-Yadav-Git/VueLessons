@@ -10,7 +10,6 @@
   </div>
 </template>
 <script>
-console.log(this.$route);
 </script>
 
 <style>
@@ -30,12 +29,15 @@ console.log(this.$route);
   font-weight: bold;
   color: #2c3e50;
 }
+body {
+  translate: all 0.5s;
+  transform: all 0.5s;
+}
 
 #nav a.router-link-exact-active {
   color: #2906f1;
   background: #a2afbb4f;
   padding: 5px;
   border-radius: 5px;
-  translate: all 0.5;
 }
 </style>
